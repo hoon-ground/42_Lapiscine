@@ -6,7 +6,7 @@
 /*   By: hyunskan <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/29 11:16:12 by hyunskan          #+#    #+#             */
-/*   Updated: 2024/08/29 12:16:32 by hyunskan         ###   ########.fr       */
+/*   Updated: 2024/08/29 21:58:13 by hyunskan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,13 +25,12 @@ int	ft_strlen(char *str)
 
 char	*ft_strdup(char *src)
 {
+	int		len;
 	int		i;
 	char	*dest;
 
-	i = 0;
-	while (src[i])
-		i++;
-	dest = malloc(sizeof(src) * (i + 1));
+	len = ft_strlen(src);
+	dest = (char *) malloc(sizeof(char) * (len + 1));
 	i = 0;
 	if (dest == NULL)
 		return (NULL);
@@ -43,6 +42,7 @@ char	*ft_strdup(char *src)
 			i++;
 		}
 		dest[i] = '\0';
+		return (dest);
 	}
 }
 
@@ -51,7 +51,7 @@ struct s_stock_str	*ft_strs_to_tab(int ac, char **av)
 	t_stock_str	*tmp;
 	int			i;
 
-	tmp = malloc(sizeof(t_stock_str) * (ac + 1));
+	tmp = (t_stock_str *)malloc(sizeof(t_stock_str) * (ac + 1));
 	if (tmp == NULL)
 		return (NULL);
 	i = 0;
@@ -62,5 +62,6 @@ struct s_stock_str	*ft_strs_to_tab(int ac, char **av)
 		tmp[i].copy = ft_strdup(av[i]);
 		i++;
 	}
+	tmp[i].str = 0;
 	return (tmp);
 }

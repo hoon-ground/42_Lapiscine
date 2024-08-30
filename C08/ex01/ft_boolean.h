@@ -6,7 +6,7 @@
 /*   By: hyunskan <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/29 10:56:54 by hyunskan          #+#    #+#             */
-/*   Updated: 2024/08/29 10:58:47 by hyunskan         ###   ########.fr       */
+/*   Updated: 2024/08/29 21:12:04 by hyunskan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 
 # include <unistd.h>
 
-# define EVEN(NB) (NB % 2 - 1)
+# define EVEN(NB) (NB % 2 == 0)
 # define TRUE 1
 # define FALSE 0
 # define SUCCESS 0

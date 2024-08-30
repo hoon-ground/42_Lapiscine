@@ -6,13 +6,13 @@
 /*   By: hyunskan <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/29 11:02:06 by hyunskan          #+#    #+#             */
-/*   Updated: 2024/08/29 11:05:25 by hyunskan         ###   ########.fr       */
+/*   Updated: 2024/08/29 19:55:58 by hyunskan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef FT_ABS_H
 # define FT_ABS_H
 
-# define ABS(num) (num * ((num <= 0) ? -1 : 1))
+# define ABS(n) (n * ((n <= 0) ? -1 : 1))
 
 #endif

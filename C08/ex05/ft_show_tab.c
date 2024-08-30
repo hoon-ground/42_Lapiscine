@@ -6,7 +6,7 @@
 /*   By: hyunskan <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/29 12:24:38 by hyunskan          #+#    #+#             */
-/*   Updated: 2024/08/29 14:40:01 by hyunskan         ###   ########.fr       */
+/*   Updated: 2024/08/30 10:53:22 by hyunskan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,27 +32,19 @@ void	ft_putstr(char *str)
 
 void	ft_putnbr(int nbr)
 {
-	long long	num;
-
-	num = nbr;
-	if (num < 0)
+	if (nbr > 9)
 	{
-		write(1, "-", 1);
-		num = -num;
-	}
-	if (num > 9)
-	{
-		ft_putnbr(num / 10);
-		ft_putnbr(num % 10);
+		ft_putnbr(nbr / 10);
+		ft_putnbr(nbr % 10);
 	}
 	else
-		ft_putchar(num + '0');
+		ft_putchar(nbr + '0');
 }
 
 void	ft_show_tab(struct s_stock_str *par)
 {
 	int	i;
-	
+
 	i = 0;
 	while (par[i].str)
 	{
@@ -60,7 +52,8 @@ void	ft_show_tab(struct s_stock_str *par)
 		ft_putchar('\n');
 		ft_putnbr(par[i].size);
 		ft_putchar('\n');
-		ft_putnbr(par[i].copy);
+		ft_putstr(par[i].copy);
 		ft_putchar('\n');
+		i++;
 	}
 }
