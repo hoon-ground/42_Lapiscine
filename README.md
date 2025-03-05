@@ -1,4 +1,4 @@
-# 42gyeongsan LA-PISCINE
+# 42경산 라피신
 
 # README
 <code>#THE REASON WE POSTED</code><br>
